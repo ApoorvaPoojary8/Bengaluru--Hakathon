@@ -4,9 +4,22 @@ import rateLimit from 'express-rate-limit'
 import { db } from './db.js'
 
 const app = express()
+const SERVER_VERSION = '1.1.0'
+const startedAt = new Date().toISOString()
 
 app.use(cors())
 app.use(express.json({ limit: '4mb' }))
+
+// ── Health check endpoint ──────────────────────────────────
+app.get('/api/health', (_req, res) => {
+  res.json({
+    status: 'ok',
+    version: SERVER_VERSION,
+    uptime: process.uptime(),
+    started_at: startedAt,
+    environment: process.env.NODE_ENV || 'development',
+  })
+})
 
 function badRequest(res, message) {
   return res.status(400).json({ error: message })
@@ -165,7 +178,7 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 3001
 
 if (process.env.NODE_ENV !== 'test') {
-  app.listen(PORT, () => console.log(`Sahaay API running on port ${PORT}`))
+  app.listen(PORT, () => console.log(`Sahaay API v${SERVER_VERSION} running on port ${PORT}`))
 }
 
 export { app }
