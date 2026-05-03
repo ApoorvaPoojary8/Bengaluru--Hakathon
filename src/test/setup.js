@@ -13,7 +13,11 @@ global.SpeechSynthesisUtterance = vi.fn().mockImplementation(() => ({
 global.speechSynthesis = {
   speak: vi.fn(),
   cancel: vi.fn(),
-  getVoices: vi.fn().mockReturnValue([]),
+  pause: vi.fn(),
+  resume: vi.fn(),
+  speaking: false,
+  onvoiceschanged: null,
+  getVoices: vi.fn().mockReturnValue([{ lang: 'en-IN', name: 'Mock Voice' }]),
 }
 
 // Mock SpeechRecognition — not available in jsdom
