@@ -237,7 +237,7 @@ Sahaay is designed for India's connectivity reality:
 
 ## 👥 Team
 
-Built with ❤️ by **Team Sahaay** at Bengaluru Hackathon 2026.
+Built with ❤️ and passion by **Team Sahaay** at Bengaluru Hackathon 2026.
 
 | Member | Role |
 |---|---|
