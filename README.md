@@ -253,5 +253,5 @@ This project is licensed under the MIT License — see [LICENSE](LICENSE) for de
 
 <p align="center">
   <i>"Technology should be an equalizer, not a divider."</i><br/>
-  <b>Sahaay AI — Your eyes, your voice, your independence.</b>
+  <b>Sahaay AI — Your eyes, your voice, your independence!</b>
 </p>
