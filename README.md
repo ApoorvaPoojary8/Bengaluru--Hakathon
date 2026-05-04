@@ -241,7 +241,7 @@ Built with ❤️ and passion by **Team Sahaay** at Bengaluru Hackathon 2026.
 
 | Member | Role |
 |---|---|
-| Apoorva Poojary | Full-Stack Development & Integration |
+| Sairaj | Full-Stack Development & Integration |
 
 ---
 
